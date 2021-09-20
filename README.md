@@ -3,7 +3,7 @@ Official code for our ICCV paper: "From Continuity to Editability: Inverting GAN
 
 **1**. Build the environment with stylegan.yaml (Anaconda uis required) \
 **2**. Compile FlowNet2 dependencies (correlation, resample, and channel norm layers).\
-Reference:https://github.com/phoenix104104/fast_blind_video_consistency\
+Reference:https://github.com/phoenix104104/fast_blind_video_consistency. \
 **3**. Download the StyleGAN weight and FlowNet weight from: https://drive.google.com/file/d/1g2gp4tR0wAc6uG24qkt82pM3afD-vfBT/view?usp=sharing. \
 **4**. Python main.py
 
