@@ -33,7 +33,7 @@ def main():
     parser = argparse.ArgumentParser(description='Find latent representation of reference images using perceptual loss')
     parser.add_argument('--batch_size', default=1, help='Batch size for generator and perceptual model', type=int)
     parser.add_argument('--resolution',default=1024,type=int)
-    parser.add_argument('--weight_file',default="weight_files/pytorch/karras2019stylegan-ffhq-1024x1024.pt",type=str)
+    parser.add_argument('--weight_file',default="weight_files/karras2019stylegan-ffhq-1024x1024.pt",type=str)
     parser.add_argument('--iteration',default=5000,type=int)
     parser.add_argument('--undex', type=int, default=1)
     parser.add_argument('--frames', type=int, default=5)
