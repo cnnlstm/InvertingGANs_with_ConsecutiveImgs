@@ -30,7 +30,7 @@ def make_dir(path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Find latent representation of reference images using perceptual loss')
+    parser = argparse.ArgumentParser(description='Find latent representation with consecutive images')
     parser.add_argument('--batch_size', default=1, help='Batch size for generator and perceptual model', type=int)
     parser.add_argument('--resolution',default=1024,type=int)
     parser.add_argument('--weight_file',default="weight_files/karras2019stylegan-ffhq-1024x1024.pt",type=str)
@@ -41,7 +41,7 @@ def main():
 
 
     args=parser.parse_args()
-    args.video_path = "./selected_videos_12/"
+    args.video_path = "./RAVDESS_12/"
     args.rgb_max = 1.0
     args.fp16 = False
     
@@ -75,7 +75,7 @@ def main():
     video_list = sorted(os.listdir(args.video_path))
     video_list.reverse()
     for video in video_list:
-        param_path = 'inversion_results/ours/'+video+'/param/'
+        param_path = 'inversion_results/ours/'+video+'/codes/'
         inv_path = 'inversion_results/ours/'+video+'/image/'
         make_dir(inv_path)
         make_dir(param_path)
